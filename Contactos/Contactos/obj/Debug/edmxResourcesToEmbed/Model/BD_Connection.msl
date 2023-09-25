@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BD_ContactosModelStoreContainer" CdmEntityContainer="BD_ContactosEntities">
+    <EntitySetMapping Name="Contactos">
+      <EntityTypeMapping TypeName="BD_ContactosModel.Contacto">
+        <MappingFragment StoreEntitySet="Contactos">
+          <ScalarProperty Name="IdContacto" ColumnName="IdContacto" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="E_Mail" ColumnName="E-Mail" />
+          <ScalarProperty Name="Morada" ColumnName="Morada" />
+          <ScalarProperty Name="Imagem" ColumnName="Imagem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

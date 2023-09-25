@@ -1,0 +1,29 @@
+﻿<Window x:Class="Contactos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Contactos"
+        mc:Ignorable="d"
+        Title="Agenda de Contactos" Height="450" Width="800" Icon="Images/Contacts.jpg">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="43"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <DockPanel Name="Menu" Grid.Row="0" Background="DarkCyan">
+            <Menu DockPanel.Dock="Top" FontSize="12" Margin="4">
+                <MenuItem Command="{Binding Fechar, Source={StaticResource ctrl}}" Header="Sair" MinWidth="70"></MenuItem>
+                <MenuItem Header="Janela" MinWidth="80">
+                    <MenuItem Header="Início" MinWidth="50"
+                              CommandParameter="pagina1"
+                              Command="{Binding cmdnavegar, Source={StaticResource ctrl}}"></MenuItem>
+                    <MenuItem Header="Contactos" MinWidth="50"
+                              CommandParameter="pagina2"
+                              Command="{Binding cmdnavegar, Source={StaticResource ctrl}}"></MenuItem>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <Frame Grid.Row="1" Name="myFrame" Source="/Contactos;component/View/Page1.xaml"></Frame>
+    </Grid>
+</Window>
